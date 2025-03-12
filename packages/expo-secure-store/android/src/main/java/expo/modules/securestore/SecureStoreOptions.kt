@@ -5,6 +5,7 @@ import expo.modules.kotlin.records.Record
 import java.io.Serializable
 
 class SecureStoreOptions(
+  @Field var accessGroup: String = null,
   // Prompt can't be an empty string
   @Field var authenticationPrompt: String = " ",
   @Field var keychainService: String = SecureStoreModule.DEFAULT_KEYSTORE_ALIAS,

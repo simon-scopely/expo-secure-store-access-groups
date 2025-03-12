@@ -62,6 +62,11 @@ export const WHEN_UNLOCKED_THIS_DEVICE_ONLY: KeychainAccessibilityConstant =
 // @needsAudit
 export type SecureStoreOptions = {
   /**
+   * - Android: Not supported.
+   * - iOS: The access group the item is in, equivalent to [`kSecAttrAccessGroup`](https://developer.apple.com/documentation/security/ksecattraccessgroup/).
+   */
+  accessGroup?: string;
+  /**
    * - Android: Equivalent of the public/private key pair `Alias`.
    * - iOS: The item's service, equivalent to [`kSecAttrService`](https://developer.apple.com/documentation/security/ksecattrservice/).
    * > If the item is set with the `keychainService` option, it will be required to later fetch the value.
